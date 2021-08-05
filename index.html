@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br> <br>
+    <center>
+        <h1 id="head">BMI Calculator</h1>
+
+        <table>
+            <tr>
+                <td rowspan="7">
+
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3VBC9L4jG0X6pIjmF82Z4cpfCJghN2FHdiQoGiqqpeqLGIPQDgy8cIbYKG62vNJl_vho&usqp=CAU"
+                        alt="img">
+
+
+                </td>
+
+                <td></td>
+                <td></td>
+
+                <td rowspan="7">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_RgGAWbZp48iQzzcB_Krst0JqIljqVP2ihGxZWfxXyySjjl1Yt4PRkkCim011kHIhJ84&usqp=CAU"
+                        alt="img">
+
+                </td>
+
+
+
+            </tr>
+
+            </tr>
+            <tr>
+                <td><label for="">Height </label> </td>
+
+                <td><input placeholder="Enter height in meters" type="text" id="heg"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><label for=""> Weight </label> </td>
+
+                <td><input type="text" placeholder="Enter weight in kiolograms" id="weg"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    <center> <button onclick="bmi()">Calculate</button></center>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <br>
+                    <div>
+                        <h3 id="res"></h3>
+                        <h3 id="res1"></h3>
+
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </center>
+
+
+
+
+
+</body>
+<script>
+    function bmi() {
+        var bmi = 0
+        var heg = parseFloat(document.getElementById("heg").value);
+        var weg = parseFloat(document.getElementById("weg").value);
+        bmi = weg / (heg ** 2);
+        document.getElementById("res").innerHTML = bmi;
+
+        var result = " ";
+        if (bmi < 18.5)
+            result = "UnderWeight";
+        else if (bmi >= 18.5 && bmi <= 24.9)
+            result = "Normal Range";
+        else if (bmi >= 25.0 && bmi <= 29.9999)
+            result = "OverWeight ";
+        else if (bmi == 30)
+            result = "Obese";
+
+        else if (bmi >= 30.0 && bmi <= 34.9)
+            result = "Obese Class I";
+
+        else if (bmi >= 35.0 && bmi <= 39.9)
+            result = "Obese Class II";
+        else if (bmi > 40)
+            result = "Obese Class III"
+
+        else
+
+            result = "sd"
+        document.getElementById("res1").innerHTML = result;
+        return false;
+    }
+</script>
+
+<style>
+    body {
+        margin-top: 1.5rem;
+        background-image: radial-gradient(rgba(42, 45, 46, 0.233), white, rgba(192, 192, 36, 0.226));
+    }
+
+    img {
+        height: 160%;
+        width: 99%;
+        border-radius: 5px;
+        box-shadow: cornsilk 3px 3px 3px;
+    }
+
+    input {
+        width: 200;
+        height: 190;
+        font-size: 1.2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+
+    table {
+        width: 70%;
+        border: none;
+    }
+
+    tr {
+        margin: 1rem;
+    }
+
+    body {
+        background-image: radial-gradient(rgba(106, 108, 109, 0.082), rgba(255, 255, 255, 0.253), rgba(141, 141, 138, 0.226));
+        background-size: cover;
+    }
+
+    button {
+        background-color: rgb(250, 235, 153);
+        color: rgb(18, 25, 61);
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    #res {
+        color: rgb(14, 10, 70);
+        font-size: 150%;
+    }
+
+    #res1 {
+        font-size: 250%;
+        color: rgb(129, 22, 129);
+        background-color: oldlace;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #head {
+        color: brown;
+        font-size: 250%;
+    }
+
+    label {
+        font-size: 140%;
+        font-weight: bold;
+        color: rgb(13, 15, 87);
+    }
+
+    #logo {
+        border-radius: 45%;
+        box-shadow: rgb(245, 244, 243) 3px 3px 3px;
+        margin-bottom: 20px;
+    }
+
+    td {
+        padding-left: 40px;
+    }
+</style>
+
+</html>
