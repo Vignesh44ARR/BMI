@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./bmical.js"></script>
 </head>
 
 <body>
@@ -13,17 +14,18 @@
     <center>
         <h1 id="head">BMI Calculator</h1>
 
+        <form action="./bmical.js">
         <table>
             <tr>
                 <td rowspan="7">
 
 
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3VBC9L4jG0X6pIjmF82Z4cpfCJghN2FHdiQoGiqqpeqLGIPQDgy8cIbYKG62vNJl_vho&usqp=CAU"
+                    <img src="data:image/jpeg;base64,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"
                         alt="img">
 
 
                 </td>
-
+                <td></td>
                 <td></td>
                 <td></td>
 
@@ -42,7 +44,12 @@
             <tr>
                 <td><label for="">Height </label> </td>
 
-                <td><input placeholder="Enter height in meters" type="text" id="heg"></td>
+                <td><input required placeholder="Enter height " type="text" id="heg"></td>
+                <td><select name="" id="he">
+                        <option value="1">Meters</option>
+                        <option value="2">CMs</option>
+                        <option value="3">Inches</option>
+                    </select></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -50,18 +57,23 @@
             <tr>
                 <td><label for=""> Weight </label> </td>
 
-                <td><input type="text" placeholder="Enter weight in kiolograms" id="weg"></td>
+                <td><input type="text" required placeholder="Enter weight" id="weg"></td>
+                <td><select name="" id="we">
+                        <option value="1">kgs</option>
+                        <option value="2">pounds</option>
+                        <option value="3">grams</option>
+                    </select></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td colspan=2>
-                    <center> <button onclick="bmi()">Calculate</button></center>
+                <td colspan=3>
+                    <center> <input type="submit" value="Submit"></center>
                 </td>
             </tr>
             <tr>
-                <th colspan="2">
+                <th colspan="3">
                     <br>
                     <div>
                         <h3 id="res"></h3>
@@ -71,6 +83,7 @@
                 </th>
             </tr>
         </table>
+    </form>
     </center>
 
 
@@ -78,39 +91,7 @@
 
 
 </body>
-<script>
-    function bmi() {
-        var bmi = 0
-        var heg = parseFloat(document.getElementById("heg").value);
-        var weg = parseFloat(document.getElementById("weg").value);
-        bmi = weg / (heg ** 2);
-        document.getElementById("res").innerHTML = bmi;
 
-        var result = " ";
-        if (bmi < 18.5)
-            result = "UnderWeight";
-        else if (bmi >= 18.5 && bmi <= 24.9)
-            result = "Normal Range";
-        else if (bmi >= 25.0 && bmi <= 29.9999)
-            result = "OverWeight ";
-        else if (bmi == 30)
-            result = "Obese";
-
-        else if (bmi >= 30.0 && bmi <= 34.9)
-            result = "Obese Class I";
-
-        else if (bmi >= 35.0 && bmi <= 39.9)
-            result = "Obese Class II";
-        else if (bmi > 40)
-            result = "Obese Class III"
-
-        else
-
-            result = "sd"
-        document.getElementById("res1").innerHTML = result;
-        return false;
-    }
-</script>
 
 <style>
     body {
